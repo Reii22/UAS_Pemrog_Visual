@@ -1,0 +1,114 @@
+object TfrmLogin: TTfrmLogin
+  Left = 471
+  Height = 298
+  Top = 181
+  Width = 365
+  Caption = 'Login'
+  ClientHeight = 298
+  ClientWidth = 365
+  Color = 4259584
+  LCLVersion = '3.0.0.3'
+  object Label1: TLabel
+    Left = 165
+    Height = 30
+    Top = 32
+    Width = 59
+    Caption = 'Login'
+    Color = 4259584
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -21
+    Font.Name = 'Sitka Text'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object BLogin: TButton
+    Left = 112
+    Height = 25
+    Top = 176
+    Width = 75
+    Caption = 'Login'
+    TabOrder = 0
+    OnClick = BLoginClick
+  end
+  object Label2: TLabel
+    Left = 113
+    Height = 18
+    Top = 80
+    Width = 56
+    Caption = 'Username'
+    Font.CharSet = ANSI_CHARSET
+    Font.Name = 'Sitka Text'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 113
+    Height = 18
+    Top = 128
+    Width = 54
+    Caption = 'Password'
+    Font.CharSet = ANSI_CHARSET
+    Font.Name = 'Sitka Text'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object EUsername: TEdit
+    Left = 113
+    Height = 23
+    Top = 96
+    Width = 176
+    TabOrder = 1
+    TextHint = 'Masukkan username'
+  end
+  object EPassword: TEdit
+    Left = 112
+    Height = 23
+    Top = 144
+    Width = 177
+    EchoMode = emPassword
+    PasswordChar = '*'
+    TabOrder = 2
+    TextHint = 'Masukkan password'
+  end
+  object BExit: TButton
+    Left = 213
+    Height = 25
+    Top = 176
+    Width = 75
+    Caption = 'Exit'
+    TabOrder = 3
+    OnClick = BExitClick
+  end
+  object SQLQuery1: TSQLQuery
+    FieldDefs = <>
+    Database = SQLConnector1
+    Transaction = SQLTransaction1
+    Params = <>
+    Macros = <>
+    Left = 293
+    Top = 213
+  end
+  object SQLConnector1: TSQLConnector
+    Connected = True
+    LoginPrompt = False
+    DatabaseName = 'latihan1'
+    KeepConnection = False
+    Transaction = SQLTransaction1
+    ConnectorType = 'ODBC'
+    Left = 85
+    Top = 213
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = True
+    Database = SQLConnector1
+    Left = 187
+    Top = 213
+  end
+end
